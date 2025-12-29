@@ -37,5 +37,12 @@ public class PlacementManagementController {
         service.deletePlacement(id);
         return "Placement deleted successfully";
     }
+    
+    @PutMapping("/{id}")
+    public PlacementManagement updatePlacement(
+            @PathVariable Long id,
+            @RequestBody PlacementManagement placement) {
+        return service.updatePlacement(id, placement);}
+    
 }
 

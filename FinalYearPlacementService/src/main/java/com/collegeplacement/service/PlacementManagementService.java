@@ -29,5 +29,34 @@ public class PlacementManagementService {
     public void deletePlacement(Long id) {
         repository.deleteById(id);
     }
+    
+    public PlacementManagement updatePlacement(Long id, PlacementManagement newData) {
+
+        PlacementManagement existing = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Placement not found"));
+
+        if (newData.getCompanyName() != null)
+            existing.setCompanyName(newData.getCompanyName());
+
+        if (newData.getJobRole() != null)
+            existing.setJobRole(newData.getJobRole());
+
+        if (newData.getLocation() != null)
+            existing.setLocation(newData.getLocation());
+
+        if (newData.getSalaryPackage() != 0)
+            existing.setSalaryPackage(newData.getSalaryPackage());
+
+        if (newData.getPlacementDate() != null)
+            existing.setPlacementDate(newData.getPlacementDate());
+
+        if (newData.getEligibleQualification() != null)
+            existing.setEligibleQualification(newData.getEligibleQualification());
+
+        if (newData.getEligiblePassoutYear() != null)
+            existing.setEligiblePassoutYear(newData.getEligiblePassoutYear());
+
+        return repository.save(existing);
+    }
 }
 

@@ -24,30 +24,77 @@ public class PlacementManagement {
 
     @Column(name = "placement_date")
     private String placementDate;
-    
-    
+
     @Column(name = "eligible_qualification")
-    private String eligiblequalification;     //B.E, B.Tech, MCA
-    
+    private String eligibleQualification;
+
     @Column(name = "eligible_passoutyear")
-    private Integer eligiblePassoutYear;      // 2025
+    private Integer eligiblePassoutYear;
 
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    // ===== GETTERS & SETTERS =====
 
-    public String getCompanyName() { return companyName; }
-    public void setCompanyName(String companyName) { this.companyName = companyName; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getJobRole() { return jobRole; }
-    public void setJobRole(String jobRole) { this.jobRole = jobRole; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    public String getCompanyName() {
+        return companyName;
+    }
 
-    public double getSalaryPackage() { return salaryPackage; }
-    public void setSalaryPackage(double salaryPackage) { this.salaryPackage = salaryPackage; }
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
-    public String getPlacementDate() { return placementDate; }
-    public void setPlacementDate(String placementDate) { this.placementDate = placementDate; }
+    public String getJobRole() {
+        return jobRole;
+    }
+
+    public void setJobRole(String jobRole) {
+        this.jobRole = jobRole;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getSalaryPackage() {
+        return salaryPackage;
+    }
+
+    public void setSalaryPackage(double salaryPackage) {
+        this.salaryPackage = salaryPackage;
+    }
+
+    public String getPlacementDate() {
+        return placementDate;
+    }
+
+    public void setPlacementDate(String placementDate) {
+        this.placementDate = placementDate;
+    }
+
+    public String getEligibleQualification() {
+        return eligibleQualification;
+    }
+
+    public void setEligibleQualification(String eligibleQualification) {
+        this.eligibleQualification = eligibleQualification;
+    }
+
+    public Integer getEligiblePassoutYear() {
+        return eligiblePassoutYear;
+    }
+
+    public void setEligiblePassoutYear(Integer eligiblePassoutYear) {
+        this.eligiblePassoutYear = eligiblePassoutYear;
+    }
 }
+
